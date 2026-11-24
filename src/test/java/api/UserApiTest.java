@@ -77,6 +77,7 @@ public class UserApiTest {
 
     }
 
+    //APi for deleting a post
     @Test
     public void deletePost() {
         given()
@@ -105,9 +106,9 @@ public class UserApiTest {
                 .statusCode(201)
                 .extract().as(Post.class);
 
-        Assert.assertEquals(createdPost.getTitle(),newPost.getTitle());
-        Assert.assertEquals(createdPost.getBody(),newPost.getBody());
-        Assert.assertEquals(createdPost.getUserId(),newPost.getUserId());
-        Assert.assertEquals(createdPost.getId(),101);
+        Assert.assertEquals(createdPost.getTitle(), newPost.getTitle());
+        Assert.assertEquals(createdPost.getBody(), newPost.getBody());
+        Assert.assertEquals(createdPost.getUserId(), newPost.getUserId());
+        Assert.assertEquals(createdPost.getId(), 101);
     }
 }
